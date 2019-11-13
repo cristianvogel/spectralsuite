@@ -50,7 +50,6 @@ trackDelayBypass: ?TrackDelaysBypass
 trackDelayScale: ?TrackDelayScale
 trackDelaySpread: ?TrackDelaySpread
 trackDelayFeedback: ?trackDelayFeedback
-trackDelayLadder: ?trackDelayLadder
 trackDelayReverseRead: ?trackDelayReverseRead
 trackDelayMix: ?trackDelayMix
 shapeToTrackDelay: ?ShapeToTrackDelay
@@ -182,7 +181,6 @@ trackDelayBypass: ?TrackDelaysBypass
 trackDelayScale: ?TrackDelayScale
 trackDelaySpread: ?TrackDelaySpread
 trackDelayFeedback: ?trackDelayFeedback
-trackDelayLadder: ?trackDelayLadder
 trackDelayReverseRead: ?trackDelayReverseRead
 trackDelayMix: ?trackDelayMix
 shapeToTrackDelay: ?ShapeToTrackDelay
