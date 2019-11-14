@@ -55,8 +55,8 @@ shapeWaves: 'S1 short vactrol filtered.wav'
 
 source: (inputs at: 2)
 sourceinputX: (inputs at: 3)
-
-trackDelayMax: 100
+  
+trackDelayMax: 100  "in Frames"
 trackDelayBypass: !TrackDelaysBypass
 trackDelayScale: !TrackDelayScale
 trackDelaySpread: !TrackDelaySpread
@@ -93,8 +93,11 @@ stereoWidth: !StereoWidth
 specEnvAmmount: !SpecEnvelope
 specEnvTimeConstant: !SpecEnvBPM bpm s
 specEnvShape: !SpecEnvelopeShape
-specEnvParam1: !SpecEnv.x
+
+"in build will become type HotArray ?specEnvParams:  #( {!SpecEnv.x} {!SpecEnv.y} )"
+specEnvParam1: !SpecEnv.x 
 specEnvParam2: !SpecEnv.y
+
 specEnvReset: !specEnvReset
 
 shuffleMemory: 20 "no Capytalk!"
@@ -104,23 +107,22 @@ shuffleJitter: !shuffleJitter
 shuffleBypass: !ShuffleBypass
 
 shapeBandWidth: !shapeBandWidth
-shapeToFreeze: !ShapeToFreeze
 shapeShift: !shapeShift
 shapeScrub:!shapeScrub
 shapeScale: !shapeScale
 shapeOffset: (!shapeOffset * (1 ramp0: 5 s))
 shapeForm: !shapeForm
+shapeTilt: !ShapeTilt
+shapeToFreeze: !ShapeToFreeze
 
 frozenTracksOnly: !frozenTracksOnly
 fullFreeze: !FullFreeze
 subtractFreeze: !SubtractFreeze
 bypassFreeze: !bypassFreeze
 frozenGain: !FrozenGain db
-shapeTilt: !ShapeTilt
 resetfreeze: !Resetfreeze
 
 blurTimeConstant: ((!TimeConstant smoothFor: 2 s))
-spreadTimeConstants: !SpreadTimeConstants
 spreadStartTimes: !spreadStartTimes
 blurInterpolate:  !BlurInterpolate
 blurReverse: !reverse
@@ -137,13 +139,10 @@ cutLows: !cutLows
 
 imageRotate: !ImageRotate
 imageWidth: !ImageWidth
-imageRipples: 1 "no Capytalk!"
 
 shiftFormants: !shiftFormants
 stretchFormants: !StretchFormants
 
-resynthMod: !ResynthMod
-resynthModSlewrate: !ResynthModSlewRate
 
 phasorDensity: !phasorDensity
 phasorShape: !phasorShape
@@ -174,7 +173,7 @@ preFiltersOption: (( options at: #postFilters ) xor:  ( options at: #preFilters 
 postFiltersOption: ( options at: #postFilters ) 
 spectrogram: (options at: #spectrogram)
 shuffler: (options at: #shuffler)
-shapedFreeze: true
+shapedFreeze: true "always true"
 spectralEnvelopes: (options at: #spectralEnvelopes)
 inputX: (options at: #inputx)
 masks: (options at: #masks)
