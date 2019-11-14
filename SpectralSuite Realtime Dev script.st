@@ -21,7 +21,7 @@ options:= Dictionary new.
 options 
 
 add: #stereo -> true;		" Stereo or Mono"
-add: #inputx -> false;		"Cross mags from 3rd input"
+add: #inputx -> true;		"Cross mags from 3rd input"
 add: #spectralDynamics -> true;
 add: #phasor -> true;
 add: #phasorScope -> true;
@@ -29,9 +29,9 @@ add: #preFilters -> false;
 add: #postFilters -> true;
 add: #shuffler -> false;
 add: #shapedFreeze -> true;
-add: #spectralEnvelopes -> true;
-add: #masks -> false;
-add: #deranger -> false;
+add: #spectralEnvelopes -> false;
+add: #masks -> true;
+add: #deranger -> true;
 add: #trackDelays -> false;
 add: #tonalNoise -> true;
 add: #spectrogram ->true. 
@@ -51,7 +51,8 @@ fftSize: 4096 "no Capytalk!"
 "^^^^ through and control latency is related to this frame length ^^^"
 "^^^^ sound quality too! -- experiment with it ^^^^^^^^^^^^^^^^^"
 
-shapeWaves: 'S1 short vactrol filtered.wav'
+shapeWaves: 'WobblyGamelan_10.wav'
+specEnvWaves: 'SpectralEnvelopeWaves.wav'
 
 source: (inputs at: 2)
 sourceinputX: (inputs at: 3)
@@ -151,11 +152,12 @@ complexPhasor: !complexPhasor
 fine: !Fine
 phasorModSync:!phasorModSync
 
+shapeToDynamics: !shapeToDynamics
 companderMakeUp: !companderMakeUp
 limiterRelease: !limiterRelease
 limiterAttack: !limiterAttack
 companderCurve: !CompanderCurve
-companderMix: !CompanderMix
+dynamics: !dynamics
 companderThreshold: !CompanderThreshold
 
 

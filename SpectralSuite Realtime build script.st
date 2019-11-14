@@ -1,6 +1,6 @@
 "#####################"
 "### Spectral Suite 2019######"
-"### RT v.7.71 ###########"
+"### RT v.7.8 ###########"
 "#####################"
 "programming and design///"
 "(c) 2018-2019 Cristian Vogel"
@@ -78,7 +78,7 @@ magicDustRotate: ?magicDustRotate
 magicDustWidth: ?magicDustWidth
 magicDust: ?MagicDust
 
-
+specEnvWaves: ?specEnvWaves
 specEnvAmmount: ?SpecEnvelope
 specEnvTimeConstant: ?SpecEnvBPM 
 specEnvShape: ?SpecEnvelopeShape
@@ -135,12 +135,13 @@ complexPhasor: ?complexPhasor
 fine: ?PhasorFine
 phasorModSync:?phasorModSync
 
-limiting: ?limiting
+
+shapeToDynamics: ?shapeToDynamics
+companderMakeUp: ?companderMakeUp
 limiterRelease: ?limiterRelease
 limiterAttack: ?limiterAttack
-
 companderCurve: ?CompanderCurve
-companderMix: ?CompanderMix
+dynamics: ?dynamics
 companderThreshold: ?CompanderThreshold
 
 
@@ -266,12 +267,12 @@ complexPhasor: ?complexPhasor
 fine: ?PhasorFine
 phasorModSync:?phasorModSync
 
-limiting: ?limiting
+shapeToDynamics: ?shapeToDynamics
+companderMakeUp: ?companderMakeUp
 limiterRelease: ?limiterRelease
 limiterAttack: ?limiterAttack
-
 companderCurve: ?CompanderCurve
-companderMix: ?CompanderMix
+dynamics: ?dynamics
 companderThreshold: ?CompanderThreshold
 
 stereo: true

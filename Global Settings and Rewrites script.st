@@ -1,9 +1,9 @@
 "####################"
-"### SpectralSuite 2019 RT v7.71 ###"
+"### SpectralSuite 2019 v7.72 ###"
 "####################"
 
 "##################"
-"### Global Settings and reWrites ###"
+"### RT Global Settings and reWrites ###"
 "##################"
 
 |  fftSizeNorm frameLength |
@@ -16,6 +16,8 @@ frameLength := fftSizeNorm / 2.
 
 (inputs at: (?stereo varIfTrue:[2] ifFalse:[1])) 
 start: 0 s 
+polysignalWaves: ?SpecEnvWaves
+specEnvShape: ((?specEnvShape * ((?SpecEnvWaves sampleFileDuration samp removeUnits / 4096.0) -1) truncated))
 shapeForm: ((?shapeForm * ((?shapeWaves sampleFileDuration samp removeUnits / 4096.0) -1) truncated))
 fftSize: fftSizeNorm 
 frameLength: frameLength
