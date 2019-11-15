@@ -1,6 +1,6 @@
 "#####################"
 "### FFT Suite 2019######"
-"### v.7.7.2 dev ###########"
+"### v.7.8.32 dev ###########"
 "#####################"
 "programming and design///"
 "(c) 2018-2019 Cristian Vogel"
@@ -21,19 +21,19 @@ options:= Dictionary new.
 options 
 
 add: #stereo -> true;		" Stereo or Mono"
-add: #inputx -> true;		"Cross mags from 3rd input"
+add: #inputx -> false;		"Cross mags from 3rd input"
 add: #spectralDynamics -> true;
-add: #phasor -> true;
+add: #phasor -> false;
 add: #phasorScope -> true;
 add: #preFilters -> false;
 add: #postFilters -> true;
 add: #shuffler -> false;
 add: #shapedFreeze -> true;
-add: #spectralEnvelopes -> false;
+add: #spectralEnvelopes -> true;
 add: #masks -> true;
-add: #deranger -> true;
-add: #trackDelays -> false;
-add: #tonalNoise -> true;
+add: #deranger -> false;
+add: #trackDelays -> true;
+add: #tonalNoise -> false;
 add: #spectrogram ->true. 
 
 
@@ -115,6 +115,7 @@ shapeOffset: (!shapeOffset * (1 ramp0: 5 s))
 shapeForm: !shapeForm
 shapeTilt: !ShapeTilt
 shapeToFreeze: !ShapeToFreeze
+shapeOrder: !ShapeOrder
 
 frozenTracksOnly: !frozenTracksOnly
 fullFreeze: !FullFreeze

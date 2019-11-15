@@ -92,6 +92,7 @@ shuffleAmount: ?ShuffleAmount
 shuffleJitter: ?shuffleJitter
 shuffleBypass: ?ShuffleBypass
 
+shapeOrder: ?shapeOrder
 shapeWaves: ?shapeWaves
 shapeBandWidth: ?shapeBandWidth
 shapeToFreeze: ?ShapeToFreeze
@@ -224,6 +225,7 @@ shuffleAmount: ?ShuffleAmount
 shuffleJitter: ?shuffleJitter
 shuffleBypass: ?ShuffleBypass
 
+shapeOrder: ?shapeOrder
 shapeWaves: ?shapeWaves
 shapeBandWidth: ?shapeBandWidth
 shapeToFreeze: ?ShapeToFreeze
