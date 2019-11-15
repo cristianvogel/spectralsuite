@@ -15,7 +15,7 @@ Gustav has always preferred full randomisation of phase data in order to get art
 
 My approach was to develop a multichannel phase randomisation noise core, that synthesises a stereo noise spectrum with frequency related spatial information. It is mono from DC and begins to increase the de-correlation between channels like a funnel, so that the width is is more natural sounding. This can be tuned. The spatial 'funnel' also has some kind of 'ripples' or 'twists' , so that we don't  get a linear widening funnel, but instead a spatial form that ripples between monophonic and de-correlated phase information as it widens upwards through the frequency spectrum. The frequency focus of these 'ripples' can be adjusted by the user to locate where the mono information maps best onto the source material.
 
-Furthermore, complete phases randomisation synthesis is not a compulsory choice. The user can blend between 'Extracted' phase data, a glitchy phase synthesis and full randomisation the so-called 'Magic Dust'.  
+Furthermore, complete phase randomisation synthesis is not a compulsory choice. The user can blend between 'Extracted' phase data, a glitchy phase synthesis and full randomisation the so-called 'Magic Dust'.  
 
 The 'Extracted' mode is working with as much original or modified from the original analysed phase information as possible.  It might display some artefacts as phase data is not being interpolated over frames ( see *Rabbit Hole Time Suckers* below)  - but generally in Kyma we get a good result reading analysed phase information, once the correct frame synchronisation between processed magnitude and phase frames has been found.  
 
@@ -23,7 +23,7 @@ In between 'Extracted' and 'Magic Dust' is an area where the phase information i
 
 'Magic Dust' is all out phase randomisation, applying the 'funnel' spatial noise core described above to control the width up through the frequency spectrum. 
 
-Furthermore, some of the processors only apply phase randomisation when needed. This is particularly the case in the Shaped Freeze module, which will only randomise the phases on Tracks whose magnitudes are being partially or fully frozen whilst leaving unfrozen tracks to pass through.
+Some of the processors only apply phase randomisation when needed. This is particularly the case in the Shaped Freeze module, which will only randomise the phases on Tracks whose magnitudes are being partially or fully frozen whilst leaving unfrozen tracks to pass through.
 
 ## Frame Shape Programmer
 
