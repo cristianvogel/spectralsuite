@@ -11,7 +11,7 @@ Many thanks to Gustav Scholda, SØS Gunver Ryberg, Symbolic Sound, Will Klingenm
 # Milestones and Breakthroughs
 
 ## Magic Dust Phase Synthesis Algorithm
-Gustav has always preferred full randomisation of phase data in order to get artefact free resynthesis. I wanted to pursue a hybrid version that could keep original phase information intact, especially for maintaining a useable stereo image (de-correlated phase randomisation makes a very wide stereo image with little mid information and a lot of side)
+Gustav has always preferred full randomisation of phase data in order to get artefact free resynthesis. I wanted to pursue a hybrid version that could keep original phase information intact, especially for maintaining a useable stereo image. I find that de-correlated phase randomisation is too diffuse and the stereo image contains little mid information and a lot of side.
 
 My approach was to develop a multichannel phase randomisation noise core, that synthesises a stereo noise spectrum with frequency related spatial information. It is mono from DC and begins to up the de-correlation between channels like a funnel, so that the width is is more natural sounding. This can be tuned. The spatial 'funnel' also has some kind of 'ripples' or 'twists' , so that we don't  get a linear widening funnel, but instead a spatial form that ripples between monophonic and de-correlated phase information as it widens upwards through the frequency spectrum. The frequency focus of these 'ripples' can be adjusted by the user to locate where the mono information maps best onto the source material.
 
