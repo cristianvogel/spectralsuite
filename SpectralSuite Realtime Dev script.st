@@ -1,6 +1,6 @@
 "#####################"
 "### FFT Suite 2019######"
-"### v.7.8.32 dev ###########"
+"### v.7.84 dev ###########"
 "#####################"
 "programming and design///"
 "(c) 2018-2019 Cristian Vogel"
@@ -20,21 +20,21 @@ options:= Dictionary new.
 
 options 
 
-add: #stereo -> true;		" Stereo or Mono"
+add: #stereo -> false;		" Stereo or Mono"
 add: #inputx -> false;		"Cross mags from 3rd input"
 add: #spectralDynamics -> true;
 add: #phasor -> false;
-add: #phasorScope -> true;
+add: #phasorScope -> false;
 add: #preFilters -> false;
 add: #postFilters -> true;
 add: #shuffler -> false;
 add: #shapedFreeze -> true;
-add: #spectralEnvelopes -> true;
-add: #masks -> true;
+add: #spectralEnvelopes -> false;
+add: #masks -> false;
 add: #deranger -> false;
-add: #trackDelays -> true;
+add: #trackDelays -> false;
 add: #tonalNoise -> false;
-add: #spectrogram ->true. 
+add: #spectrogram ->false. 
 
 
 (inputs at: 1) start: 0 
@@ -117,12 +117,12 @@ shapeTilt: !ShapeTilt
 shapeToFreeze: !ShapeToFreeze
 shapeOrder: !ShapeOrder
 
-frozenTracksOnly: !frozenTracksOnly
 fullFreeze: !FullFreeze
 subtractFreeze: !SubtractFreeze
 bypassFreeze: !bypassFreeze
-frozenGain: !FrozenGain db
+frozenLevel: !FrozenLevel
 resetfreeze: !Resetfreeze
+unFrozenLevel: !UnFrozenLevel 
 
 blurTimeConstant: ((!TimeConstant smoothFor: 2 s))
 spreadStartTimes: !spreadStartTimes
@@ -176,7 +176,7 @@ preFiltersOption: (( options at: #postFilters ) xor:  ( options at: #preFilters 
 postFiltersOption: ( options at: #postFilters ) 
 spectrogram: (options at: #spectrogram)
 shuffler: (options at: #shuffler)
-shapedFreeze: true "always true"
+shapedFreeze: (options at: #shapedFreeze)
 spectralEnvelopes: (options at: #spectralEnvelopes)
 inputX: (options at: #inputx)
 masks: (options at: #masks)

@@ -7,6 +7,12 @@ Sat Nov 16 19:37:16 2019
 
 ### Working in V7.84 Dev and Build.kym
 
-* Found and fixed mistake with shaped freeze thresholded phase randomisation
-* Replaced !FrozenTracksOnly toggle with !UnFrozen level fader to mix levels between frozen and unfrozen
+* Found and fixed mistake with shaped freeze thresholded phase randomisation at 'phase resynth algorithm' node
+* Deprecated !FrozenTracksOnly toggle parameter field
+* added an unfrozen level fader to mix levels between frozen and unfrozen
 * got !ResetFreeze to work correctly and to also read latest frame when !FullFreeze is switched on
+* set threshold for phase randomisation to -30db lets a bit of phase movement through freezing
+* added !UnFrozenLevel renamed --!frozenGain-- to !FrozenLevel
+* re-instated #freezeShaper to boolean build options as it turns out FrameShape Progammer _can_ be running even when the freeze module is not built
+* optimised and made fullFreeze continous instead of a switch, allowing for arbitrary smooth times into and out of fullFreeze state... like a gradual thaw
+
