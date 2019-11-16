@@ -1,0 +1,12 @@
+##Spectral Suite
+###Changes Log
+
+
+
+Sat Nov 16 19:37:16 2019
+
+### Working in V7.84 Dev and Build.kym
+
+* Found and fixed mistake with shaped freeze thresholded phase randomisation
+* Replaced !FrozenTracksOnly toggle with !UnFrozen level fader to mix levels between frozen and unfrozen
+* got !ResetFreeze to work correctly and to also read latest frame when !FullFreeze is switched on
