@@ -3,4 +3,4 @@ Partial code, builds, manual and other development files in SmallTalk and Capyta
 
 ![VCS](/SpectralSuiteVCS.png)
 
-[Hear an audio example...] (https://www.linkedin.com/pulse/morphing-emergent-sound-cristian-vogel/)
+Hear an audio example... (https://www.linkedin.com/pulse/morphing-emergent-sound-cristian-vogel/)
