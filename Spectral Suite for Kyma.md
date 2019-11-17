@@ -8,6 +8,8 @@ The following pages document some of the development challenges and solutions ac
 Many thanks to Gustav Scholda, SØS Gunver Ryberg, Symbolic Sound, Will Klingenmeier, Anders Skibsted for their invaluable support and encouragement throughout this long process. 
 
 
+[](https://www.dropbox.com/s/wx4yxiiwkpy06tn/SpectralSuiteVCS.png)
+
 # Milestones and Breakthroughs
 
 ## Magic Dust Phase Synthesis Algorithm
