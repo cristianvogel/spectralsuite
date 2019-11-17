@@ -37,120 +37,95 @@ ifFalse: [ self informUser: ( 'Error: Data missing after #'&k). self abortForKym
 ]
 ] ifTrue: [ self informUser: ( 'Option keys must start with #... for example: #stereo true #prefilters false etc'). self abortForKyma.  ].
 
-?enable varIfTrue: [
+?Enable varIfTrue: [
 (inputs at: 1) 
 
 start: 0 
 
-
+blurInterpolate: ?blurInterpolate
+blurReset: ?blurReset
+blurReverse: ?blurreverse
+blurTimeConstant: ?blurTimeConstant
+bypassFreeze: ?bypassFreeze
+companderCurve: ?companderCurve
+companderMakeUp: ?companderMakeUp
+companderThreshold: ?companderThreshold
+companderWeighting: ?CompanderWeighting
+complexPhasor: ?complexPhasor
+cutHighs: ?cutHighs
+cutLows: ?cutLows
+dynamics: ?dynamics
 fftsize: ?fftsize
-
-shapeWaves: ?shapeWaves
-specEnvWaves: ?specEnvWaves
-companderWeighting: ?companderWeighting
-
-source: ?source
-sourceinputX: ?sourceinputX
-
-trackDelayMax: ?trackDelayMax
-trackDelayBypass: ?TrackDelaysBypass
-trackDelayScale: ?TrackDelayScale
-trackDelaySpread: ?TrackDelaySpread
-trackDelayFeedback: ?trackDelayFeedback
-trackDelayReverseRead: ?trackDelayReverseRead
-trackDelayMix: ?trackDelayMix
-shapeToTrackDelay: ?ShapeToTrackDelay
-
-glitchRate: ?GlitchRate
-glitchMags: ?GlitchMags
-glitchShape: ?GlitchShape
-
-pitchDerange: ?PitchDerange
-moreDeranged: ?MoreDeranged
-shapeToFormants: ?ShapeToFormants
-
-tonalNoiseBalance: ?TonalNoiseBalance
-noiseGain: ?NoiseGain
-tonalGain: ?TonalGain
-
-
-masking: ?Masking
-masksShaper: ?masksShaper
-masksFadeInTc: ?masksFadeInTc
-masksFadeOutTc: ?masksFadeOutTc
-masksTimeConstant: ?masksTimeConstant
-shapeToMasks: ?ShapeToMasks
-
+fine: ?phasorFine
+frozenLevel: ?frozenLevel
+fullFreeze: ?fullFreeze
+gain: ?gain
+glitchMags: ?glitchMags
+glitchRate: ?glitchRate
+glitchShape: ?glitchShape
+inputLevel: ?inputLevel
+limiterAttack: ?limiterAttack
+limiterRelease: ?limiterRelease
+magicDust: ?magicDust
 magicDustRotate: ?magicDustRotate
 magicDustWidth: ?magicDustWidth
-magicDust: ?MagicDust
-
-
-specEnvAmmount: ?SpecEnvelope
-specEnvTimeConstant: ?SpecEnvBPM 
-specEnvShape: ?SpecEnvelopeShape
+masking: ?masking
+masksFadeInTc: ?masksFadeInTc
+masksFadeOutTc: ?masksFadeOutTc
+masksShaper: ?masksShaper
+masksTimeConstant: ?masksTimeConstant
+moreDeranged: ?moreDeranged
+noiseGain: ?noiseGain
+phasorDensity: ?phasorDensity
+phasorModSync:?phasorModSync
+phasorShape: ?phasorShape
+pitchDerange: ?pitchDerange
+resetFreeze: ?resetFreeze
+seed: ?seed
+shapeBandWidth: ?shapeBandWidth
+shapeForm: ?shapeForm
+shapeOffset: ?shapeOffset
+shapeOrder: ?shapeOrder
+shapeScale: ?shapeScale
+shapeScrub:?shapeScrub
+shapeShift: ?shapeShift
+shapeTilt: ?shapeTilt
+shapeToBlur: ?shapeToBlur
+shapeToDynamics: ?shapeToDynamics
+shapeToFormants: ?ShapeToFormants
+shapeToFreeze: ?shapeToFreeze
+shapeToMasks: ?shapeToMasks
+shapeToTrackDelay: ?shapeToTrackDelay
+shapeWaves: ?ShapeWaves
+shiftFormants: ?shiftFormants
+shuffleAmount: ?shuffleAmount
+shuffleBypass: ?shuffleBypass
+shuffleJitter: ?shuffleJitter
+shuffleMemory: ?shuffleMemory
+shuffleTimeConstant: ?shuffleSpeed bpm
+source: ?Source
+sourceinputX: ?SourceInputX
+specEnvAmmount: ?specEnvelope
 specEnvParam1: (?SpecEnvParams at: 1)
 specEnvParam2: (?SpecEnvParams at: 2)
 specEnvReset: ?specEnvReset
-
-shuffleMemory: ?shuffleMemory
-shuffleTimeConstant: ?ShuffleSpeed bpm
-shuffleAmount: ?ShuffleAmount
-shuffleJitter: ?shuffleJitter
-shuffleBypass: ?ShuffleBypass
-
-shapeOrder: ?shapeOrder
-shapeBandWidth: ?shapeBandWidth
-shapeToFreeze: ?ShapeToFreeze
-shapeShift: ?shapeShift
-shapeScrub:?shapeScrub
-shapeScale: ?shapeScale
-shapeOffset: ?shapeOffset
-shapeForm: ?shapeForm
-shapeTilt: ?ShapeTilt
-
-fullFreeze: ?FullFreeze
-subtractFreeze: ?SubtractFreeze
-frozenLevel: ?frozenLevel
-unfrozenLevel: ?unfrozenLevel
-bypassFreeze: ?bypassFreeze
-frozenGain: ?FrozenGain 
-resetFreeze: ?ResetFreeze
-
-blurTimeConstant: ?blurTimeConstant
-
+specEnvShape: ?specEnvelopeShape
+specEnvTimeConstant: ?specEnvBPM 
+specEnvWaves: ?SpecEnvWaves
 spreadStartTimes: ?spreadStartTimes
-blurInterpolate: ?BlurInterpolate
-blurReverse: ?blurreverse
-blurReset: ?blurReset
-shapeToBlur: ?ShapeToBlur
-
-seed: ?seed
-
-inputLevel: ?InputLevel
-gain: ?gain
-stereoWidth: ?StereoWidth
-
-cutHighs: ?cutHighs
-cutLows: ?cutLows
-
-shiftFormants: ?shiftFormants
-stretchFormants: ?StretchFormants
-
-phasorDensity: ?phasorDensity
-phasorShape: ?phasorShape
-complexPhasor: ?complexPhasor
-fine: ?PhasorFine
-phasorModSync:?phasorModSync
-
-
-shapeToDynamics: ?shapeToDynamics
-companderMakeUp: ?companderMakeUp
-limiterRelease: ?limiterRelease
-limiterAttack: ?limiterAttack
-companderCurve: ?CompanderCurve
-dynamics: ?dynamics
-companderThreshold: ?CompanderThreshold
+stereoWidth: ?stereoWidth
+stretchFormants: ?stretchFormants
+subtractFreeze: ?subtractFreeze
+tonalGain: ?tonalGain
+tonalNoiseBalance: ?tonalNoiseBalance
+trackDelayBypass: ?trackDelaysBypass
+trackDelayFeedback: ?trackDelayFeedback
+trackDelayMax: ?trackDelayMax
+trackDelayMix: ?trackDelayMix
+trackDelayReverseRead: ?trackDelayReverseRead
+trackDelayScale: ?trackDelayScale
+trackDelaySpread: ?trackDelaySpread
+unfrozenLevel: ?unfrozenLevel
 
 
 "////private parameters\\\\\\"
@@ -158,21 +133,21 @@ companderThreshold: ?CompanderThreshold
 "do not change below this line"
 "?????????????????????????????????????????????????"
 
-stereo: ( options at: #stereo )
-spectralDynamics: ( options at: #spectralDynamics )
 complexPhasorOption:  ( options at: #phasor )
-phasorScopeOption: ( options at: #phasorScope )
-preFiltersOption: (( options at: #postFilters ) xor:  ( options at: #preFilters ))
-postFiltersOption: ( options at: #postFilters ) 
-spectrogram: (options at: #spectrogram)
-shuffler: (options at: #shuffler)
-shapedFreeze: (options at: #shapedFreeze)
-spectralEnvelopes: (options at: #spectralEnvelopes)
+deranger: (options at: #deranger)
 inputX: (options at: #inputx)
 masks: (options at: #masks)
-deranger: (options at: #deranger)
-trackDelays: (options at: #trackDelays)
+phasorScopeOption: ( options at: #phasorScope )
+postFiltersOption: ( options at: #postFilters ) 
+preFiltersOption: (( options at: #postFilters ) xor:  ( options at: #preFilters ))
+shapedFreeze: (options at: #shapedFreeze)
+shuffler: (options at: #shuffler)
+spectralDynamics: ( options at: #spectralDynamics )
+spectralEnvelopes: (options at: #spectralEnvelopes)
+spectrogram: (options at: #spectrogram)
+stereo: ( options at: #stereo )
 tonalNoise: (options at: #tonalNoise)
+trackDelays: (options at: #trackDelays)
 ]
 
 ifFalse: [
@@ -181,126 +156,104 @@ ifFalse: [
 
 (inputs at: 1)
 
+blurInterpolate: ?blurInterpolate
+blurReset: ?blurReset
+blurReverse: ?blurreverse
+blurTimeConstant: ?blurTimeConstant
+bypassFreeze: ?bypassFreeze
+companderCurve: ?companderCurve
+companderMakeUp: ?companderMakeUp
+companderThreshold: ?companderThreshold
+companderWeighting: ?CompanderWeighting
+complexPhasor: ?complexPhasor
+cutHighs: ?cutHighs
+cutLows: ?cutLows
+dynamics: ?dynamics
 fftsize: ?fftsize
-source: ?source
-sourceinputX: ?sourceinputX
-
-shapeWaves: ?shapeWaves
-specEnvWaves: ?specEnvWaves
-companderWeighting: ?companderWeighting
-
-trackDelayMax: ?trackDelayMax
-trackDelayBypass: ?TrackDelaysBypass
-trackDelayScale: ?TrackDelayScale
-trackDelaySpread: ?TrackDelaySpread
-trackDelayFeedback: ?trackDelayFeedback
-trackDelayReverseRead: ?trackDelayReverseRead
-trackDelayMix: ?trackDelayMix
-shapeToTrackDelay: ?ShapeToTrackDelay
-
-glitchRate: ?GlitchRate
-glitchMags: ?GlitchMags
-glitchShape: ?GlitchShape
-
-pitchDerange: ?PitchDerange
-moreDeranged: ?MoreDeranged
-shapeToFormants: ?ShapeToFormants
-
-tonalNoiseBalance: ?TonalNoiseBalance
-noiseGain: ?NoiseGain
-tonalGain: ?TonalGain
-
-
-masking: ?Masking
-masksShaper: ?masksShaper
-masksFadeInTc: ?masksFadeInTc
-masksFadeOutTc: ?masksFadeOutTc
-masksTimeConstant: ?masksTimeConstant
-shapeToMasks: ?ShapeToMasks
-
+fine: ?phasorFine
+frozenLevel: ?frozenLevel
+fullFreeze: ?fullFreeze
+gain: ?gain
+glitchMags: ?glitchMags
+glitchRate: ?glitchRate
+glitchShape: ?glitchShape
+inputLevel: ?inputLevel
+limiterAttack: ?limiterAttack
+limiterRelease: ?limiterRelease
+magicDust: ?magicDust
 magicDustRotate: ?magicDustRotate
 magicDustWidth: ?magicDustWidth
-magicDust: ?MagicDust
-
-
-specEnvAmmount: ?SpecEnvelope
-specEnvTimeConstant: ?SpecEnvBPM 
-specEnvShape: ?SpecEnvelopeShape
+masking: ?masking
+masksFadeInTc: ?masksFadeInTc
+masksFadeOutTc: ?masksFadeOutTc
+masksShaper: ?masksShaper
+masksTimeConstant: ?masksTimeConstant
+moreDeranged: ?moreDeranged
+noiseGain: ?noiseGain
+phasorDensity: ?phasorDensity
+phasorModSync:?phasorModSync
+phasorShape: ?phasorShape
+pitchDerange: ?pitchDerange
+resetFreeze: ?resetFreeze
+seed: ?seed
+shapeBandWidth: ?shapeBandWidth
+shapeForm: ?shapeForm
+shapeOffset: ?shapeOffset
+shapeOrder: ?shapeOrder
+shapeScale: ?shapeScale
+shapeScrub:?shapeScrub
+shapeShift: ?shapeShift
+shapeTilt: ?shapeTilt
+shapeToBlur: ?shapeToBlur
+shapeToDynamics: ?shapeToDynamics
+shapeToFormants: ?ShapeToFormants
+shapeToFreeze: ?shapeToFreeze
+shapeToMasks: ?shapeToMasks
+shapeToTrackDelay: ?shapeToTrackDelay
+shapeWaves: ?ShapeWaves
+shiftFormants: ?shiftFormants
+shuffleAmount: ?shuffleAmount
+shuffleBypass: ?shuffleBypass
+shuffleJitter: ?shuffleJitter
+shuffleMemory: ?shuffleMemory
+shuffleTimeConstant: ?shuffleSpeed bpm
+source: ?Source
+sourceinputX: ?SourceInputX
+specEnvAmmount: ?specEnvelope
 specEnvParam1: (?SpecEnvParams at: 1)
 specEnvParam2: (?SpecEnvParams at: 2)
 specEnvReset: ?specEnvReset
-
-shuffleMemory: ?shuffleMemory
-shuffleTimeConstant: ?ShuffleSpeed bpm
-shuffleAmount: ?ShuffleAmount
-shuffleJitter: ?shuffleJitter
-shuffleBypass: ?ShuffleBypass
-
-shapeOrder: ?shapeOrder
-shapeWaves: ?shapeWaves
-shapeBandWidth: ?shapeBandWidth
-shapeToFreeze: ?ShapeToFreeze
-shapeShift: ?shapeShift
-shapeScrub:?shapeScrub
-shapeScale: ?shapeScale
-shapeOffset: ?shapeOffset
-shapeForm: ?shapeForm
-shapeTilt: ?ShapeTilt
-
-fullFreeze: ?FullFreeze
-subtractFreeze: ?SubtractFreeze
-frozenLevel: ?frozenLevel
-unfrozenLevel: ?unfrozenLevel
-bypassFreeze: ?bypassFreeze
-frozenGain: ?FrozenGain 
-resetFreeze: ?ResetFreeze
-
-blurTimeConstant: ?blurTimeConstant
+specEnvShape: ?specEnvelopeShape
+specEnvTimeConstant: ?specEnvBPM 
+specEnvWaves: ?SpecEnvWaves
 spreadStartTimes: ?spreadStartTimes
-blurInterpolate: ?BlurInterpolate
-blurReverse: ?blurreverse
-blurReset: ?blurReset
-shapeToBlur: ?ShapeToBlur
+stereoWidth: ?stereoWidth
+stretchFormants: ?stretchFormants
+subtractFreeze: ?subtractFreeze
+tonalGain: ?tonalGain
+tonalNoiseBalance: ?tonalNoiseBalance
+trackDelayBypass: ?trackDelaysBypass
+trackDelayFeedback: ?trackDelayFeedback
+trackDelayMax: ?trackDelayMax
+trackDelayMix: ?trackDelayMix
+trackDelayReverseRead: ?trackDelayReverseRead
+trackDelayScale: ?trackDelayScale
+trackDelaySpread: ?trackDelaySpread
+unfrozenLevel: ?unfrozenLevel
 
-seed: ?seed
-
-inputLevel: ?InputLevel
-gain: ?gain
-stereoWidth: ?StereoWidth
-
-cutHighs: ?cutHighs
-cutLows: ?cutLows
-
-shiftFormants: ?shiftFormants
-stretchFormants: ?StretchFormants
-
-phasorDensity: ?phasorDensity
-phasorShape: ?phasorShape
-complexPhasor: ?complexPhasor
-fine: ?PhasorFine
-phasorModSync:?phasorModSync
-
-shapeToDynamics: ?shapeToDynamics
-companderMakeUp: ?companderMakeUp
-limiterRelease: ?limiterRelease
-limiterAttack: ?limiterAttack
-companderCurve: ?CompanderCurve
-dynamics: ?dynamics
-companderThreshold: ?CompanderThreshold
-
-stereo: true
-spectralDynamics: true
 complexPhasorOption:  true
-phasorScopeOption: true
-preFiltersOption: true
-postFiltersOption: true
-spectrogram: true
-shuffler: true
-shapedFreeze: true
-spectralEnvelopes: true
+deranger: true
 inputX: true
 masks: true
-deranger: true
+phasorScopeOption: true
+postFiltersOption: true
+preFiltersOption: true
+shapedFreeze: true
+shuffler: true
+spectralDynamics: true
+spectralEnvelopes: true
+spectrogram: true
+stereo: true
 tonalNoise: true
 trackDelays: true
 
