@@ -1,6 +1,6 @@
 "#####################"
 "### Spectral Suite 2019######"
-"### From Disk v.7.8 ###########"
+"### From Disk v.7.84 ###########"
 "#####################"
 "programming and design///"
 "(c) 2018-2019 Cristian Vogel"
@@ -51,6 +51,9 @@ frameJitter: ?FrameJitter
 frameBlend: ?FrameBlend
 
 analysisFile: ?analysisFile
+shapeWaves: ?shapeWaves
+specEnvWaves: ?specEnvWaves
+companderWeighting: ?companderWeighting
 
 "source: ?source"
 sourceinputX: ?sourceinputX
@@ -116,6 +119,8 @@ shapeTilt: ?ShapeTilt
 frozenTracksOnly: ?frozenTracksOnly
 fullFreeze: ?FullFreeze
 subtractFreeze: ?SubtractFreeze
+frozenLevel: ?frozenLevel
+unfrozenLevel: ?unfrozenLevel
 bypassFreeze: ?bypassFreeze
 frozenGain: ?FrozenGain 
 resetFreeze: ?ResetFreeze
@@ -168,8 +173,8 @@ phasorScopeOption: ( options at: #phasorScope )
 preFiltersOption: (( options at: #postFilters ) xor:  ( options at: #preFilters ))
 postFiltersOption: ( options at: #postFilters ) 
 spectrogram: (options at: #spectrogram)
-shuffler: true
-shapedFreeze: true
+shuffler: false
+shapedFreeze: (options at: #shapedFreeze)
 spectralEnvelopes: (options at: #spectralEnvelopes)
 inputX: (options at: #inputx)
 masks: (options at: #masks)
@@ -190,6 +195,10 @@ frameJitter: ?FrameJitter
 frameBlend: ?FrameBlend
 
 analysisFile: ?analysisFile
+
+shapeWaves: ?shapeWaves
+specEnvWaves: ?specEnvWaves
+companderWeighting: ?companderWeighting
 
 "source: ?source"
 sourceinputX: ?sourceinputX
@@ -255,6 +264,8 @@ shapeTilt: ?ShapeTilt
 frozenTracksOnly: ?frozenTracksOnly
 fullFreeze: ?FullFreeze
 subtractFreeze: ?SubtractFreeze
+frozenLevel: ?frozenLevel
+unfrozenLevel: ?unfrozenLevel
 bypassFreeze: ?bypassFreeze
 frozenGain: ?FrozenGain 
 resetFreeze: ?ResetFreeze
@@ -284,7 +295,6 @@ phasorShape: ?phasorShape
 complexPhasor: ?complexPhasor
 fine: ?PhasorFine
 phasorModSync:?phasorModSync
-
 
 shapeToDynamics: ?shapeToDynamics
 companderMakeUp: ?companderMakeUp

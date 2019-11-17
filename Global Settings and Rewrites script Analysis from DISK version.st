@@ -3,7 +3,7 @@
 "####################"
 
 "##################"
-"## FROM DISK v 7.8###"
+"## FROM DISK v 7.84###"
 "### some global settings and set up scripts ###"
 "##################"
 
@@ -54,6 +54,12 @@ ifFalse: [
 (inputs at: (?stereo varIfTrue:[2] ifFalse:[1])) 
 start: 0 s 
 
+bypassFreeze:  (?shapedFreeze varIfTrue: [ ?bypassFreeze ] ifFalse: [0] )
+resetFreeze: (?shapedFreeze varIfTrue: [ ?resetFreeze ] ifFalse: [0] )
+unfrozenLevel: (?shapedFreeze varIfTrue: [ ?unfrozenLevel ] ifFalse: [1] )
+fullFreeze: (?shapedFreeze varIfTrue: [ ?fullFreeze ] ifFalse: [0] )
+shapeToFreeze: (?shapedFreeze varIfTrue: [ ?shapeToFreeze ] ifFalse: [0] )
+
 polysignalWaves: ?SpecEnvWaves
 specEnvShape: ((?specEnvShape * ((?SpecEnvWaves sampleFileDuration samp removeUnits / 4096.0) -1) truncated))
 shapeForm: ((?shapeForm * ((?shapeWaves sampleFileDuration samp removeUnits / 4096.0) -1) truncated))
@@ -65,8 +71,6 @@ undelayed: 0
 uniq: (Kyma randomName & Kyma randomName)
 masking: (?masking into: #( { 0 @ 1} { 0.5 @ -0.5 } { 1 @ -1 } ) )
 masksG: (?masking into: #( { 0 @ 1} { 0.5 @ 3 db } { 1 @ 9 db } ) )
-
-shapeToFreeze: (?shapeToFreeze \/ ?frozenTracksOnly)
 
 frameStep: frameStep
 sAndO: sAndO

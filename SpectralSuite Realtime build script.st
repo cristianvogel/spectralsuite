@@ -1,6 +1,6 @@
 "#####################"
 "### Spectral Suite 2019######"
-"### RT v.7.8 ###########"
+"### RT v.7.84 ###########"
 "#####################"
 "programming and design///"
 "(c) 2018-2019 Cristian Vogel"
@@ -39,8 +39,15 @@ ifFalse: [ self informUser: ( 'Error: Data missing after #'&k). self abortForKym
 
 ?enable varIfTrue: [
 (inputs at: 1) 
+
 start: 0 
+
+
 fftsize: ?fftsize
+
+shapeWaves: ?shapeWaves
+specEnvWaves: ?specEnvWaves
+companderWeighting: ?companderWeighting
 
 source: ?source
 sourceinputX: ?sourceinputX
@@ -78,7 +85,7 @@ magicDustRotate: ?magicDustRotate
 magicDustWidth: ?magicDustWidth
 magicDust: ?MagicDust
 
-specEnvWaves: ?specEnvWaves
+
 specEnvAmmount: ?SpecEnvelope
 specEnvTimeConstant: ?SpecEnvBPM 
 specEnvShape: ?SpecEnvelopeShape
@@ -93,7 +100,6 @@ shuffleJitter: ?shuffleJitter
 shuffleBypass: ?ShuffleBypass
 
 shapeOrder: ?shapeOrder
-shapeWaves: ?shapeWaves
 shapeBandWidth: ?shapeBandWidth
 shapeToFreeze: ?ShapeToFreeze
 shapeShift: ?shapeShift
@@ -103,9 +109,10 @@ shapeOffset: ?shapeOffset
 shapeForm: ?shapeForm
 shapeTilt: ?ShapeTilt
 
-frozenTracksOnly: ?frozenTracksOnly
 fullFreeze: ?FullFreeze
 subtractFreeze: ?SubtractFreeze
+frozenLevel: ?frozenLevel
+unfrozenLevel: ?unfrozenLevel
 bypassFreeze: ?bypassFreeze
 frozenGain: ?FrozenGain 
 resetFreeze: ?ResetFreeze
@@ -159,13 +166,13 @@ preFiltersOption: (( options at: #postFilters ) xor:  ( options at: #preFilters 
 postFiltersOption: ( options at: #postFilters ) 
 spectrogram: (options at: #spectrogram)
 shuffler: (options at: #shuffler)
-shapedFreeze: true
+shapedFreeze: (options at: #shapedFreeze)
 spectralEnvelopes: (options at: #spectralEnvelopes)
 inputX: (options at: #inputx)
 masks: (options at: #masks)
 deranger: (options at: #deranger)
-tonalNoise: (options at: #tonalNoise)
 trackDelays: (options at: #trackDelays)
+tonalNoise: (options at: #tonalNoise)
 ]
 
 ifFalse: [
@@ -177,6 +184,10 @@ ifFalse: [
 fftsize: ?fftsize
 source: ?source
 sourceinputX: ?sourceinputX
+
+shapeWaves: ?shapeWaves
+specEnvWaves: ?specEnvWaves
+companderWeighting: ?companderWeighting
 
 trackDelayMax: ?trackDelayMax
 trackDelayBypass: ?TrackDelaysBypass
@@ -236,15 +247,15 @@ shapeOffset: ?shapeOffset
 shapeForm: ?shapeForm
 shapeTilt: ?ShapeTilt
 
-frozenTracksOnly: ?frozenTracksOnly
 fullFreeze: ?FullFreeze
 subtractFreeze: ?SubtractFreeze
+frozenLevel: ?frozenLevel
+unfrozenLevel: ?unfrozenLevel
 bypassFreeze: ?bypassFreeze
 frozenGain: ?FrozenGain 
 resetFreeze: ?ResetFreeze
 
 blurTimeConstant: ?blurTimeConstant
-
 spreadStartTimes: ?spreadStartTimes
 blurInterpolate: ?BlurInterpolate
 blurReverse: ?blurreverse

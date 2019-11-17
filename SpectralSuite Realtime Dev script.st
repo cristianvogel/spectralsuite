@@ -20,7 +20,7 @@ options:= Dictionary new.
 
 options 
 
-add: #stereo -> false;		" Stereo or Mono"
+add: #stereo -> true;		" Stereo or Mono"
 add: #inputx -> false;		"Cross mags from 3rd input"
 add: #spectralDynamics -> true;
 add: #phasor -> false;
@@ -30,10 +30,10 @@ add: #postFilters -> true;
 add: #shuffler -> false;
 add: #shapedFreeze -> true;
 add: #spectralEnvelopes -> false;
-add: #masks -> false;
-add: #deranger -> false;
-add: #trackDelays -> false;
-add: #tonalNoise -> false;
+add: #masks -> true;
+add: #deranger -> true;
+add: #trackDelays -> true;
+add: #tonalNoise -> true;
 add: #spectrogram ->false. 
 
 
@@ -51,7 +51,7 @@ fftSize: 4096 "no Capytalk!"
 "^^^^ through and control latency is related to this frame length ^^^"
 "^^^^ sound quality too! -- experiment with it ^^^^^^^^^^^^^^^^^"
 
-shapeWaves: 'WobblyGamelan_10.wav'
+shapeWaves: 'MoreSmearTables_n19.wav'
 specEnvWaves: 'SpectralEnvelopeWaves.wav'
 
 source: (inputs at: 2)
@@ -117,7 +117,7 @@ shapeTilt: !ShapeTilt
 shapeToFreeze: !ShapeToFreeze
 shapeOrder: !ShapeOrder
 
-fullFreeze: !FullFreeze
+fullFreeze: (!FullFreeze smoothFor: 0.5 s)
 subtractFreeze: !SubtractFreeze
 bypassFreeze: !bypassFreeze
 frozenLevel: !FrozenLevel
@@ -134,7 +134,7 @@ shapeToBlur: !ShapeToBlur
 seed: 0.23234 "no CapyTalk!"
 
 inputLevel: !InputLevel
-gain: (!Gain smooth: 1 s) db
+gain: (!Gain smoothFor: 1 s) db
 
 cutHighs: !cutHighs
 cutLows: !cutLows
@@ -154,6 +154,7 @@ fine: !Fine
 phasorModSync:!phasorModSync
 
 shapeToDynamics: !shapeToDynamics
+companderWeighting: 'compensatedlevelDefault.wav'
 companderMakeUp: !companderMakeUp
 limiterRelease: !limiterRelease
 limiterAttack: !limiterAttack
