@@ -1,6 +1,14 @@
 ## Spectral Suite
 ### Changes Log
 
+Mon Nov 18 20:34:06 2019
+
+### Working in V7.84 Release Candidate.kym
+* Made new builds of everything and new examples
+* Ran into an issue trying to disable parts of the flow for Paca, weird OORT that also kills the Pacarana.... looking into it
+
+
+
 Sun Nov 17 11:47:04 2019
 
 ### Working in V7.84 Dev and Build.kym
